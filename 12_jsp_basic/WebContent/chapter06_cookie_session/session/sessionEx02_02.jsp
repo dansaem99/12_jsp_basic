@@ -19,14 +19,20 @@
 			- (가정)성공 - 
 		*/
 		
+		// 세션등록 > session.setAttribute("세션명", 데이터);
+		session.setAttribute("id" , id);
+		session.setAttribute("role", "admin");
+		
 	%>
 
 	<h3>로그인 되었습니다.</h3>
 	<p>아이디 : <%=id %></p>
 	
 	<hr>
-	<p><a href="sessionEx01_03.jsp">마이페이지</a></p>
-	<p><a href="sessionEx01_04.jsp">장바구니</a></p>
+	<p><a href="sessionEx02_03.jsp">마이페이지</a></p>
+	<p><a href="sessionEx02_04.jsp">장바구니</a></p>
+	<p><a href="sessionEx02_05.jsp">로그아웃</a></p>
+
 
 </body>
 </html>

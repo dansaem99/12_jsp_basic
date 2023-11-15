@@ -8,6 +8,10 @@
 <body>
 
 	<h3>장바구니</h3>
+	<% 
+		String id = request.getParameter("id");
+	%>
+	<p><%=id %>님 로그인중</p>
 
 </body>
 </html>

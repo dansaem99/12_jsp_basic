@@ -39,7 +39,7 @@
 	-->
 
   <h2>로그인</h2>
-  <form method="post" action="sessionEx01_02.jsp">
+  <form method="post" action="sessionEx02_02.jsp">
       <p>아이디 :   <input type="text"     name="id" ></p>
       <p>패스워드 : <input type="password" name="passwd" ></p>
       <p><input type="submit" value="로그인"></p>
