@@ -1,6 +1,7 @@
 package _08_el_jstl;
 
 import java.io.IOException;
+import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,18 +10,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/jstlEx08_문제2")
-public class JstlEx08_문제2 extends HttpServlet {
+@WebServlet("/jstlEx04")
+public class JstlEx04 extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
        
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		request.setAttribute("id", "qwer1234");
-		request.setAttribute("pw", "1234");
 		
-		RequestDispatcher dis = request.getRequestDispatcher("chapter08_el_jstl/jstlEx08_문제2.jsp");
+		request.setAttribute("nData", 1000000.123);
+		request.setAttribute("now" , new Date());
+	
+		RequestDispatcher dis = request.getRequestDispatcher("chapter08_el_jstl/jstlEx04.jsp"); 
 		dis.forward(request, response);
 		
 	}
+
 }

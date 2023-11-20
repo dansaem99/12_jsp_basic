@@ -9,18 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/jstlEx08_문제2")
-public class JstlEx08_문제2 extends HttpServlet {
+@WebServlet("/jstlEx05")
+public class JstlEx05 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		request.setAttribute("id", "qwer1234");
-		request.setAttribute("pw", "1234");
 		
-		RequestDispatcher dis = request.getRequestDispatcher("chapter08_el_jstl/jstlEx08_문제2.jsp");
+		request.setAttribute("fileName" , "test_file.png");
+	
+		RequestDispatcher dis = request.getRequestDispatcher("chapter08_el_jstl/jstlEx05.jsp"); 
 		dis.forward(request, response);
 		
 	}
+
 }

@@ -15,7 +15,6 @@
 	
 		- Formatting 태그로 포맷에 관련된 태그이다.
 		- <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 를 선언한 뒤에 사용한다.
-							format
 		
 		[ Attribute ]
 		
@@ -34,20 +33,32 @@
 	--%>
 
 	<h3>데이터 형변환</h3>
-	<c:set var="num1" value="7" />
-	<c:set var="num2" value="12" />
+	<c:set var="num1" value="7"/>
+	<c:set var="num2" value="12"/>
 	
-	<%-- 숫자로 형변환 --%>
 	<fmt:parseNumber var="num1" value="${num1 }"/>
 	<fmt:parseNumber var="num2" value="${num2 }"/>
 	
 	<c:if test="${num1 < num2 }">
 		<p>${num2 }(이)가 크다.</p>
 	</c:if>
-	
+	<hr>
+
+
 	<h3>날짜 형식</h3>
+	<p>${now }</p> 													<!-- 형식이 없다. -->
+	<p><fmt:formatDate value="${now }"/></p> 						<!-- 기본 형식 yyyy.MM.dd. -->
+	<p><fmt:formatDate value="${now }" pattern="yyyy-MM-dd"/></p>	<!-- pattern을 사용해 yyyy-MM-dd -->
+	<p><fmt:formatDate value="${now }" pattern="yyyy년MM월dd일 hh시mm분ss초"/></p>	<!-- pattern을 사용해 yyyy년MM월dd일 hh시mm분ss초 -->
+	<hr>
+	
 	
 	<h3>숫자 형식</h3>
+	<p>${nData }</p> 												<!-- 형식 X -->
+	<p><fmt:formatNumber value="${nData }" /></p>					<!-- 기본형식 > 세자리 ','표현 -->
+	<p><fmt:formatNumber value="${nData }" pattern=".0"/></p>		<!-- 소수점 1자리 표현 -->
+	<p><fmt:formatNumber value="${nData }" pattern=".00"/></p>		<!-- 소수점 2자리 표현 -->
+	<p><fmt:formatNumber value="${nData }" pattern="#,##0.0"/></p>	<!-- 세자리 ','표현 + 소수점 1자리 표현 -->
 	
 </body>
 </html>

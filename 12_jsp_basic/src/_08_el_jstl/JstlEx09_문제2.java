@@ -9,17 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/jstlEx08_문제2")
-public class JstlEx08_문제2 extends HttpServlet {
+@WebServlet("/jstlEx09_문제2")
+public class JstlEx09_문제2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		request.setAttribute("id", "qwer1234");
-		request.setAttribute("pw", "1234");
+
+		request.setAttribute("isChecked", true);
 		
-		RequestDispatcher dis = request.getRequestDispatcher("chapter08_el_jstl/jstlEx08_문제2.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("chapter08_el_jstl/jstlEx09_문제2.jsp");
 		dis.forward(request, response);
 		
 	}

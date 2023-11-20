@@ -33,7 +33,7 @@ import javax.servlet.http.HttpServletResponse;
 */
 
 @WebServlet("/servletEx01") // 클라이언트가 jsp페이지가 아닌 해당 url경로로 웹시스템에 request(요구)한다.
-public class servletEx01 extends HttpServlet { // Http 통신이 가능한 HttpServlet클래스를 상속받아 구현한다.
+public class ServletEx01 extends HttpServlet { // Http 통신이 가능한 HttpServlet클래스를 상속받아 구현한다.
 	
 	private static final long serialVersionUID = 1L; // Servlet생성시 기본값으로 생성된다. 서블릿의 내부 식별자 역할을 한다.
 	
