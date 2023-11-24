@@ -1,1 +1,1 @@
-http://192.168.10.169:8080/13_jsp_mvc1/step01_boardEx/bList.jsp
+http://192.168.10.169:8080/12_jsp_basic/fileMain

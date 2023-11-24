@@ -59,7 +59,7 @@ public class Upload1 extends HttpServlet {
 		*/
 		String uploader = multipartRequest.getParameter("uploader");
 		
-		if (files.hasMoreElements()) { // 다음 정보가 있으면
+		if (files.hasMoreElements()) { // hasMoreElements() 다음 정보가 있으면 (BOARD에서 rs.next()랑 똑같다.) 다음
 			
 			String element = (String)files.nextElement(); // <input type="file"> 1개를 반환
 			
